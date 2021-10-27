@@ -10,7 +10,7 @@ jobs:
         working-directory: ${{ github.workspace }}
       - name: UMM-S Updater Step
         id: umm-s-update
-        uses: skorper/cmr-publish-umms-action@0.0.39
+        uses: skorper/cmr-publish-umms-action@0.0.40
         with:
           umm-s-json: 'cmr/test.json'
           provider: 'POCLOUD'
