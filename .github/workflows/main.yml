@@ -5,6 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to test CMR UMM-S updater Github Action
     steps:
+      - uses: actions/checkout@v2
+      - run: ls -la
+        working-directory: ${{ github.workspace }}
       - name: UMM-S Updater Step
         id: umm-s-update
         uses: skorper/cmr-publish-umms-action@0.0.36
@@ -16,5 +19,3 @@ jobs:
         env:
           cmr_user: ${{secrets.CMR_USER}}
           cmr_pass: ${{secrets.CMR_PASS}}
-      - run: ls -la
-        working-directory: ${{ github.workspace }}/tmp
