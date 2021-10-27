@@ -17,4 +17,4 @@ jobs:
           cmr_user: ${{secrets.CMR_USER}}
           cmr_pass: ${{secrets.CMR_PASS}}
       - run: ls -la
-        working-directory: ${{ github.workspace }}/
+        working-directory: ${{ github.workspace }}/tmp
