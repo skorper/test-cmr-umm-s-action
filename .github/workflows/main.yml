@@ -6,8 +6,8 @@ jobs:
     name: A job to test CMR UMM-S updater Github Action
     steps:
       - uses: actions/checkout@v2
-      - run: ls -la
-        working-directory: ${{ github.workspace }}
+      # - run: ls -la
+      #   working-directory: ${{ github.workspace }}
       - name: UMM-S Updater Step
         id: umm-s-update
         uses: skorper/cmr-publish-umms-action@0.0.51-alpha.14
